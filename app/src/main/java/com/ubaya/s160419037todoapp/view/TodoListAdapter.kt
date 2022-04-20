@@ -26,7 +26,7 @@ class TodoListAdapter(val todoList: ArrayList<Todo>,val adapterOnClick: (Todo) -
                 2 -> "Medium"
                 else -> "High"
             }
-            checkTask.text = "${todo.title} $priority"
+            checkTask.text = "${todo.title} [$priority]"
             checkTask.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) adapterOnClick(todo)
             }
